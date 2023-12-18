@@ -2,4 +2,4 @@ deploy/vagrant/*.log
 deploy/vagrant/.vagrant
 .secrets
 .vscode/
-**/accessToken.secret
+accessToken.secret
