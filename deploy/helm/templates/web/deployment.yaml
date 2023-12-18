@@ -17,6 +17,9 @@ spec:
       labels:
         release: {{ .Release.Name }}
         {{- toYaml .Values.web.podLabels | nindent 8 }}
+        impart-inspector-injection: "enabled"
+      annotations:
+        impart-inspector-sidecar-http-listener-disable-tls: "true"
     spec:
       containers:
         - name: {{ .Values.web.name }}

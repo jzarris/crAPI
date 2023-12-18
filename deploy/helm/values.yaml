@@ -21,6 +21,15 @@ web:
   replicaCount: 1
   port: 80
   sslPort: 443
+  # impart start
+  spec:
+  template:
+    metadata:
+      labels:
+        impart-inspector-injection: "enabled"
+      annotations:
+        impart-inspector-sidecar-http-listener-disable-tls: "true"
+  # impart end
   service:
     name: crapi-web
     labels:
